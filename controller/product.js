@@ -14,7 +14,7 @@ const listProducts = function (req, res){
 };
 
 const getProduct = function (req,res){
-    Product.findById(req.params.id, function (err, product) {
+    Product.findById(req.params.productId, function (err, product) {
         if (err)
             res.send(err);
         res.json(product);
@@ -60,6 +60,5 @@ res.json({
 module.exports = {
     listProducts, 
     getProduct,
-    updateProduct,
     deleteProduct
 }
