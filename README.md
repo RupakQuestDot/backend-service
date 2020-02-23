@@ -50,3 +50,17 @@ DB_URL = "ADD YOUR OWN DB URL"
 
 ### Testing 
 Use Postman as GUI tool to test the api end points.
+
+After completing the setup, just navigate to `localhost:8081/api/` you will can see the message `Welcome to CRUD APP API..!`.
+ 
+ ### End Points: 
+ 
+1. To upload product choose `POST` method the URL : `localhost:8081/api/products` and the required entries of data with the following feilds `title, description, images, category, broucher` . Broucher feild accepts a file input. Also this method requires a `JWT` token to passed in headers, ie., user must be logged in.
+
+2. Get All Products : Choose `GET` method, URL:`localhost:8081/api/products` ==> Public Route
+
+3. Get Details of a product : Choose `GET` method, URL:`localhost:8081/api/products/:productId`, <:productId> must be an ID of Product.
+
+4. Update the product details : Choose `PUT` method, URL:`localhost:8081/api/products/:productId`, <:productId> must be an ID of Product.==> User Must be logged in similar to `POST` method.
+
+5. Delete the Product : Choose `DELETE` method, URL:`localhost:8081/api/products/:productId`, <:productId> must be an ID of Product.
